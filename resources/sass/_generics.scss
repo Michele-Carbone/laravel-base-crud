@@ -3,6 +3,45 @@ body{
 
     footer{
 
+        .footer-top{
+            background-image: url("../../public/images/footer-bg.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        .about {
+            height: 600px;
+            color: $white;
+            display: flex;
+    
+            .links-about {
+                float: left;
+                margin: 20px;
+    
+                h3 {
+                    margin: 10px 0;
+                }
+    
+                li {
+                    list-style-type: none;
+                    margin: 10px 0;
+                    a {
+                        color: rgb(92, 92, 92);;
+                        font-weight: bold;
+                    }
+                }
+    
+               
+            }
+    
+            figure {
+                background-image: url("../../public/images/dc-logo-bg.png");
+                height: 100%;
+                background-size: cover;
+                background-position: center;
+            }
+        }
+        }
+        
         .footer-follow{
             ul {
                 margin-top: 20px;
@@ -13,6 +52,7 @@ body{
                     list-style-type: none;
                     font-weight: bold;
                     a{
+                        text-decoration: none;
                         padding: 15px 10px;
                         .fab{
                             font-size: 1.5rem;

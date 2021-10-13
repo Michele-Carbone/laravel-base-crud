@@ -7,5 +7,5 @@
 
 @section('content')
 
-    <h1>sono la home</h1>  
+    <h1 class="text-center fw-bold"><a href="{{ route('comics.index') }}">COLLECTION COMICS</a></h1>  
 @endsection 

@@ -12177,6 +12177,46 @@ body {
   background-color: #2f2f2f;
 }
 
+body footer .footer-top {
+  background-image: url(/images/footer-bg.jpg?dfd68d2946f211e1b678af05fd2f830b);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+body footer .footer-top .about {
+  height: 600px;
+  color: #fff;
+  display: flex;
+}
+
+body footer .footer-top .about .links-about {
+  float: left;
+  margin: 20px;
+}
+
+body footer .footer-top .about .links-about h3,
+body footer .footer-top .about .links-about .h3 {
+  margin: 10px 0;
+}
+
+body footer .footer-top .about .links-about li {
+  list-style-type: none;
+  margin: 10px 0;
+}
+
+body footer .footer-top .about .links-about li a {
+  color: #5c5c5c;
+  font-weight: bold;
+}
+
+body footer .footer-top .about figure {
+  background-image: url(/images/dc-logo-bg.png?f4404ce9dc132a08a47f19e3f73f1417);
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
 body footer .footer-follow ul {
   margin-top: 20px;
   display: flex;
@@ -12190,6 +12230,7 @@ body footer .footer-follow ul li {
 }
 
 body footer .footer-follow ul li a {
+  text-decoration: none;
   padding: 15px 10px;
 }
 
