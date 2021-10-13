@@ -1,0 +1,33 @@
+body{
+    background-color: rgb(47, 47, 47);
+
+    footer{
+
+        .footer-follow{
+            ul {
+                margin-top: 20px;
+                display: flex;
+                padding: 0;
+                justify-content: center;
+                li{
+                    list-style-type: none;
+                    font-weight: bold;
+                    a{
+                        padding: 15px 10px;
+                        .fab{
+                            font-size: 1.5rem;
+                            color: rgb(92, 92, 92);
+                            padding: 0 5px;
+                        }
+                        .fas{
+                            font-size: 1.5rem;
+                            color: rgb(92, 92, 92);
+                            padding: 0 5px;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}

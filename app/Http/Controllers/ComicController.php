@@ -1,0 +1,92 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\Comic;
+
+use Illuminate\Http\Request;
+
+class ComicController extends Controller
+{
+    /**
+     * Display a listing of the resource.   //mostra la lista delle risorse
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        //
+        $comics = Comic::all();
+        return view('comics.index', compact('comics'));
+    }
+
+    /**
+     * Show the form for creating a new resource.       //mostra il form per creare una nuova risorsa
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        //
+    }
+
+    /**
+     * Store a newly created resource in storage.       //Store salva la nuova risorsa in Strorage
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        //
+    }
+
+    /**
+     * Display the specified resource.      //Mostra la risorsa specifica
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        //
+        $comic = Comic::findOrFail($id);
+
+
+        return view('comics.show', compact('comic'));
+    }
+
+    /**
+     * Show the form for editing the specified resource.        //Mostra il form per editare la specifica risorsa
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.    //Modifica la specifica risorsa in storage
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.  
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        //
+    }
+}
