@@ -9,10 +9,14 @@
 
     
     <h1 class="text-center fw-bold"><a href="{{ route('comics.index') }}">COLLECTION COMICS</a></h1>  
-
+    
 
         <table class="table table-dark table-striped">
-            <h2 class="text-center fw-bold my-5 text-primary">Elenco Fumetti</h2>
+            <div class="d-flex align-items-center justify-content-between">
+                <h2 class="text-center fw-bold my-5 text-primary">Elenco Fumetti</h2>
+            <a href="{{ route('comics.create') }}" class="btn btn-success">Crea Fumetto</a>
+            </div>
+            
             <thead>
             <tr>
                 <th scope="col">Title</th>

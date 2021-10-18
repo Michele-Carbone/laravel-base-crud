@@ -28,6 +28,7 @@ class ComicController extends Controller
     public function create()
     {
         //
+        return view('comics.create');
     }
 
     /**
@@ -39,6 +40,10 @@ class ComicController extends Controller
     public function store(Request $request)
     {
         //
+        $data = $request->all();    //prendiamo tutti i dati dal form
+
+        $comic = Comic::create($data);      // Creo una istanza e serve filleble
+        return redirect()->route('comics.show', $comic);    // reinderizzo il post che voglio mostrare a show
     }
 
     /**
