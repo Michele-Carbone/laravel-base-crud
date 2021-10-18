@@ -5,6 +5,7 @@
 
 @section('content')
     <div class="card-title">
+        <h5><a href="{{route('comics.edit', $comic->id)}}" class="btn btn-danger">Modifica</a></td></h5>
         <h1 class="fw-bold my-3 text-center">{{ $comic->title }}</h1>
         <img src="{{ $comic->thumb }}" class="my-2 img-fluid" alt="...">
         <ul class="list-group list-group-flush fw-bold my-5">

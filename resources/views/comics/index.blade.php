@@ -6,8 +6,14 @@
 
 @section('content')
 <div class="container">
-    <h5><a href="{{ route('home')}}" class="btn btn-primary">Home</a></h5>
-    <h1 class="card-title text-center">Lista Fumetti</h1>
+    
+    <div  class="d-flex align-items-center justify-content-between">
+        <h5><a href="{{ route('home')}}" class="btn btn-primary">Home</a></h5>
+        <a href="{{ route('comics.create') }}" class="btn btn-success">Crea Fumetto</a>
+    </div>
+
+
+    <h1 class="card-title text-center text-primary">Lista Fumetti</h1>
     <div class="row d-flex justify-content-between">
                 
         @forelse ($comics as $comic)

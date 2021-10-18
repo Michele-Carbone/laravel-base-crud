@@ -35,6 +35,7 @@
                     <td>{{$comic->price}}</td>
                     
                     <td><a href="{{route('comics.show', $comic->id)}}" class="btn btn-warning me-2">Go</a>
+                        <!-- Edit ha bisogno di un parametro, di conseguenza gli passiamo id pke sara' il singolo comic che andremo a modificare //siamo all interno di forElse -->
                     <a href="{{route('comics.edit', $comic->id)}}" class="btn btn-danger">Edit</a></td>
                     
                 </tr>
