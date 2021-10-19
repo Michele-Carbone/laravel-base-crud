@@ -5,7 +5,7 @@
 
 @section('content')
     <div class="card-title">
-        <h5><a href="{{route('comics.edit', $comic->id)}}" class="btn btn-danger">Modifica</a></td></h5>
+        <h5><a href="{{route('comics.edit', $comic->id)}}" class="btn btn-success">Modifica</a></td></h5>
         <h1 class="fw-bold my-3 text-center">{{ $comic->title }}</h1>
         <img src="{{ $comic->thumb }}" class="my-2 img-fluid" alt="...">
         <ul class="list-group list-group-flush fw-bold my-5">
@@ -17,7 +17,12 @@
             <li class="list-group-item">Descrizione: {{ $comic->description }}</li>
         </ul>
     </div>
-    <div>
+    <div class="d-flex justify-content-center">
         <a href="{{ route('comics.index', $comic->id)}}" class="btn btn-primary">Torna indietro</a>
+        <form action="{{route('comics.destroy', $comic->id)}}" method="POST">
+            @csrf
+            @method('DELETE')
+            <button type="submit" class="btn btn-danger ms-2">Elimina</button>
+        </form>
     </div>
 @endsection

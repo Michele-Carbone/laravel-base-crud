@@ -34,10 +34,18 @@
                     <td>{{$comic->type}}</td>
                     <td>{{$comic->price}}</td>
                     
-                    <td><a href="{{route('comics.show', $comic->id)}}" class="btn btn-warning me-2">Go</a>
+                    <td class="d-flex justify-content-end">
+                        <!-- a usa un metodo GET-->
+                        <a href="{{route('comics.show', $comic->id)}}" class="btn btn-warning me-2">Go</a>
                         <!-- Edit ha bisogno di un parametro, di conseguenza gli passiamo id pke sara' il singolo comic che andremo a modificare //siamo all interno di forElse -->
-                    <a href="{{route('comics.edit', $comic->id)}}" class="btn btn-danger">Edit</a></td>
-                    
+                        <a href="{{route('comics.edit', $comic->id)}}" class="btn btn-success">Edit</a>
+                        <!-- Dato che destory non ha un pagina dedicata per poter interagire dobbiamo usare il form con il method="POST" in piu all interno dobbiamo aggiungere il method('DELETE')-->
+                        <form action="{{route('comics.destroy', $comic->id)}}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger ms-2">Elimina</button>
+                        </form>
+                    </td>
                 </tr>
                 @empty
                     <td colspan="5" class="text-center">Nessun risultato corrispondente</td>
