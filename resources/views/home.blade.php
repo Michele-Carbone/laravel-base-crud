@@ -31,6 +31,8 @@
                 <th scope="col">Series</th>
                 <th scope="col">Type</th>
                 <th scope="col">Price</th>
+                <th scope="col">Creata il</th>
+                <th scope="col">Modificata il</th>
                 <th scope="col">Action</th>
             </tr>
             </thead>
@@ -41,6 +43,8 @@
                     <td>{{$comic->series}}</td>
                     <td>{{$comic->type}}</td>
                     <td>{{$comic->price}}</td>
+                    <td>{{$comic->getCreateAt()}}</td>
+                    <td>{{$comic->getUpdateAt()}}</td>
                     
                     <td class="d-flex justify-content-end">
                         <!-- a usa un metodo GET-->
