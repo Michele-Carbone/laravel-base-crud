@@ -5,13 +5,25 @@
 @section('section-id', 'create-comic')
 
 @section('content')
+<!--Validazione del form-->
+@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
 <div>
+    <a href="{{ route('home')}}" class="btn btn-success">Home</a>
     <h1 class="text-center fw-bold text-primary">Crea Fumetto</h1>
 </div>
 
 <!-- Nel form e' importante che il name coincida con quello che noi abbiamo scritto per le tabelle del DB -->
 <!-- method="Post" perche' stiamo crando una pagina  in action inseriamo la rotta in store -->
-<form method="POST" action="{{route('comics.store')}}">
+<form method="POST" action="{{route('comics.store')}}" novalidate>
     {{-- @csrf token serve a proteggere i dati che l utente inserisce // e' molto importanto inserirlo pke senza di esso non ti fa andare avanti --}}
     @csrf
     <div class="mb-3">
