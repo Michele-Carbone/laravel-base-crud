@@ -103,11 +103,11 @@ class ComicController extends Controller
         //$comic = Comic::findOrFail($id);
 
         //seconda opzione   con Comic $comic al posto dell $id nella funzione
-        $comic->delete();
+        $comic->delete();   //metodo 
 
         //terza opzione     con $id all interno della funzione
         //Comic::destroy($id);
 
-        return redirect()->route('comics.index');
+        return redirect()->route('home')->with('delete', $comic->title);    //with() ci da la possibilita di passare dei dati extra non come parametro ma come variabili di sessione    //sta dicendo fai una redirect con chiave 'delete' una variabile di sessione
     }
 }
